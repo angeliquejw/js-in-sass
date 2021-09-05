@@ -89,13 +89,65 @@ Not valid CSS, but with PostCSS you can start using the format in the working dr
 
 ---
 
+```scss
+.element {
+  @include prefix((
+    border-radius: 30px
+  ), moz webkit);
+}
+```
 
+???
+- Idea of mixin may be familiar
+- Note that, in this case, it takes in arguments or params
+
+---
+
+```scss
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+```
+
+---
+
+- function + arguments
+
+```scss
+  prefix($declarations, $prefixes: ())
+```
+
+--
+
+- loop
+```scss
+  @each $prefix in $prefixes
+```
+
+--
+
+- interpolation
+```scss
+  #{$property}
+```
+
+
+---
 
     </textarea>
   <script src="js/remark-latest.min.js" type="text/javascript">
   </script>
   <script type="text/javascript">
-    var slideshow = remark.create();
+    var slideshow = remark.create({
+      highlightStyle: "tomorrow"
+    });
 
   </script>
 </body>

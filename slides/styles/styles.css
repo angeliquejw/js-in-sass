@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/**
+ * @license
+ * MyFonts Webfont Build ID 3700915, 2019-01-18T17:07:51-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Native-Regular by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/regular/
+ * Copyright: Copyright &#x00A9; 2016 by Mattox Shuler. All rights reserved.
+ * Licensed pageviews: Unlimited
+ * 
+ * Webfont: NeueAlteGrotesk-Regular by VisualWorks
+ * URL: https://www.myfonts.com/fonts/visualworks/neue-alte-grotesk/regular/
+ * Copyright: Copyright © 2017-2018 by Krzysztof Chuc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: NeueAlteGrotesk-Medium by VisualWorks
+ * URL: https://www.myfonts.com/fonts/visualworks/neue-alte-grotesk/medium/
+ * Copyright: Copyright © 2017-2018 by Krzysztof Chuc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: NeueAlteGrotesk-SemiBold by VisualWorks
+ * URL: https://www.myfonts.com/fonts/visualworks/neue-alte-grotesk/semi-bold/
+ * Copyright: Copyright © 2017-2018 by Krzysztof Chuc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: NeueAlteGrotesk-Bold by VisualWorks
+ * URL: https://www.myfonts.com/fonts/visualworks/neue-alte-grotesk/bold/
+ * Copyright: Copyright © 2017-2018 by Krzysztof Chuc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: NeueAlteGrotesk-Heavy by VisualWorks
+ * URL: https://www.myfonts.com/fonts/visualworks/neue-alte-grotesk/heavy/
+ * Copyright: Copyright © 2017-2018 by Krzysztof Chuc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * Webfont: NeueAlteGrotesk-Black by VisualWorks
+ * URL: https://www.myfonts.com/fonts/visualworks/neue-alte-grotesk/black/
+ * Copyright: Copyright © 2017-2018 by Krzysztof Chuc. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3700915
+ * 
+ * © 2019 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3878b3");
+@font-face {
+  font-display: fallback;
+  font-family: 'Native-Regular';
+  src: url("/webfonts/3878B3_0_0.eot");
+  src: url("/webfonts/3878B3_0_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_0_0.woff2") format("woff2"), url("/webfonts/3878B3_0_0.woff") format("woff"), url("/webfonts/3878B3_0_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'NeueAlteGrotesk-Regular';
+  src: url("/webfonts/3878B3_1_0.eot");
+  src: url("/webfonts/3878B3_1_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_1_0.woff2") format("woff2"), url("/webfonts/3878B3_1_0.woff") format("woff"), url("/webfonts/3878B3_1_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'NeueAlteGrotesk-Medium';
+  src: url("/webfonts/3878B3_2_0.eot");
+  src: url("/webfonts/3878B3_2_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_2_0.woff2") format("woff2"), url("/webfonts/3878B3_2_0.woff") format("woff"), url("/webfonts/3878B3_2_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'NeueAlteGrotesk-SemiBold';
+  src: url("/webfonts/3878B3_3_0.eot");
+  src: url("/webfonts/3878B3_3_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_3_0.woff2") format("woff2"), url("/webfonts/3878B3_3_0.woff") format("woff"), url("/webfonts/3878B3_3_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'NeueAlteGrotesk-Bold';
+  src: url("/webfonts/3878B3_4_0.eot");
+  src: url("/webfonts/3878B3_4_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_4_0.woff2") format("woff2"), url("/webfonts/3878B3_4_0.woff") format("woff"), url("/webfonts/3878B3_4_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'NeueAlteGrotesk-Heavy';
+  src: url("/webfonts/3878B3_5_0.eot");
+  src: url("/webfonts/3878B3_5_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_5_0.woff2") format("woff2"), url("/webfonts/3878B3_5_0.woff") format("woff"), url("/webfonts/3878B3_5_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'NeueAlteGrotesk-Black';
+  src: url("/webfonts/3878B3_6_0.eot");
+  src: url("/webfonts/3878B3_6_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/3878B3_6_0.woff2") format("woff2"), url("/webfonts/3878B3_6_0.woff") format("woff"), url("/webfonts/3878B3_6_0.ttf") format("truetype");
+}
+
+.remark-slide {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.remark-slide *,
+.remark-slide *::before,
+.remark-slide *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.remark-slide img {
+  height: auto;
+  max-height: 520px;
+  max-width: 100%;
+}
+
+.remark-slide del {
+  opacity: 0.6;
+}
+
+.remark-slide {
+  font-size: 32px;
+}
+
+.remark-slide-content {
+  font-size: 1em;
+}
+
+.remark-slide-content h1,
+.remark-slide-content h2,
+.remark-slide-content h3,
+.remark-slide-content h4,
+.remark-slide-content h5,
+.remark-slide-content h6 {
+  font-weight: normal;
+}
+
+.remark-slide-content h1,
+.remark-slide-content h2,
+.remark-slide-content h3,
+.remark-slide-content h4,
+.remark-slide-content h5,
+.remark-slide-content h6,
+.remark-slide-content p,
+.remark-slide-content li {
+  line-height: 1.75em;
+  margin: 0;
+}
+
+.remark-slide-content p + p,
+ul + .remark-slide-content p,
+ol + .remark-slide-content p {
+  margin-top: 0.875em;
+}
+
+.remark-slide-content h1,
+.remark-slide-content h2 {
+  font-family: NeueAlteGrotesk-Bold;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.16667em;
+  margin-top: 0.875em;
+  margin-bottom: 0.875em;
+}
+
+.remark-slide-content h1 {
+  font-size: 2.6rem;
+}
+
+.remark-slide-content h2 {
+  font-size: 1.8rem;
+}
+
+.remark-slide-content h3 {
+  font-family: NeueAlteGrotesk-Semibold;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.remark-slide-content:not(.title) > h1 {
+  background-image: linear-gradient(transparent calc(100% - 2px), #F6F930 2px);
+  background-position: left 100%;
+  background-repeat: no-repeat;
+  background-size: 75% 100%;
+  font-family: Native-Regular;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  margin-bottom: 1em;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.remark-slide-content.title > h1 {
+  font-family: NeueAlteGrotesk-Black;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 14ch;
+}
+
+.remark-slide-content.title > h1 + h2 {
+  margin-top: -2.5rem;
+}
+
+.remark-slide-content.title--short > h1 {
+  max-width: 12ch;
+}
+
+.remark-slide-content .text-larger {
+  font-size: 130%;
+}
+
+.remark-slide-content .text-smaller {
+  font-size: 65%;
+}
+
+.remark-slide {
+  background-color: #FCFCFC;
+  color: #22333B;
+  font-family: NeueAlteGrotesk-Regular;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.remark-slide-content.bkgd-contain {
+  background-size: contain;
+}
+
+.remark-slide-content.bkgd-cover {
+  background-size: cover;
+}
+
+.remark-slide::before {
+  background-image: linear-gradient(to right, #22333B 50%, transparent 50%), linear-gradient(#F6F930, transparent 8px);
+  background-position: left top, left 100%;
+  background-repeat: repeat-x, no-repeat;
+  background-size: 20px 3px, 120% 100%;
+  content: '';
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 65%;
+}
+
+.remark-slide ::-moz-selection {
+  background-color: #A2F1C1;
+}
+
+.remark-slide ::selection {
+  background-color: #A2F1C1;
+}
+
+.remark-slide-content {
+  height: 100%;
+  width: 100%;
+}
+
+.remark-slide-number {
+  font-family: Native-Regular;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.no-slide-numbers .remark-slide-number {
+  display: none;
+}
+
+a {
+  color: rgba(10, 9, 8, 0.8);
+}
+
+a:hover, a:active {
+  color: #0A0908;
+}
+
+a:visited {
+  color: #22333B;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.cf::before, .cf::after {
+  content: ' ';
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+.right-float {
+  float: right;
+}
+
+.left-float {
+  float: left;
+}
+
+.remark-code,
+.remark-inline-code {
+  background-color: rgba(246, 249, 48, 0.2);
+  font-family: Native-Regular;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: initial;
+}
+
+.remark-code {
+  font-size: 1em;
+  white-space: pre-wrap;
+}
+
+@page {
+  margin: 0;
+  size: 800px 600px;
+}
+
+@media print {
+  .remark-slide-scaler {
+    height: 100% !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    -webkit-transform: scale(1) !important;
+            transform: scale(1) !important;
+    width: 100% !important;
+  }
+  .remark-slide::before {
+    content: unset;
+  }
+  .remark-slide-content:not(.title) > h1 {
+    background-image: none;
+    background-position: unset;
+    background-size: unset;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

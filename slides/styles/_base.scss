@@ -1,0 +1,19 @@
+.remark-slide {
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  img {
+    height: auto;
+    max-height: 520px;
+    max-width: 100%;
+  }
+
+  del {
+    opacity: 0.6;
+  }
+}

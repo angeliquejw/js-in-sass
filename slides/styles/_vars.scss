@@ -1,0 +1,29 @@
+$color-offblack: #0A0908;
+$color-offwhite: #FCFCFC;
+$color-grey: #ccc;
+
+$color-yellow: #F6F930;
+$color-mint: #A2F1C1;
+$color-slate: #22333B;
+
+
+$color-text-body: $color-slate;
+$color-text-link: $color-offblack;
+$color-text-link-visited: $color-text-body;
+
+// FONTS
+@mixin font-grotesk($weight:'Regular') {
+  font-family: NeueAlteGrotesk-#{$weight};
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-body() {
+  @include font-grotesk();
+}
+
+@mixin font-mono() {
+  font-family: Native-Regular;
+  font-weight: normal;
+  font-style: normal;
+}

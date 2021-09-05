@@ -1,0 +1,26 @@
+@page {
+  margin: 0;
+  size: 800px 600px;
+}
+
+@media print {
+  .remark-slide-scaler {
+    height: 100% !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    transform: scale(1) !important;
+    width: 100% !important;
+  }
+
+  .remark-slide::before {
+    content: unset;
+  }
+
+  .remark-slide-content:not(.title)>h1 {
+    background-image: none;
+    background-position: unset;
+    background-size: unset;
+  }
+}

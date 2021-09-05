@@ -1,0 +1,96 @@
+.remark-slide {
+  background-color: $color-offwhite;
+  color: $color-text-body;
+  @include font-grotesk();
+
+  &-content.bkgd-contain {
+    background-size: contain;
+  }
+
+  &-content.bkgd-cover {
+    background-size: cover;
+  }
+
+  &::before {
+    background-image: linear-gradient(to right, $color-text-body 50%, transparent 50%), linear-gradient($color-yellow, transparent 8px);
+    background-position: left top, left 100%;
+    background-repeat: repeat-x, no-repeat;
+    background-size: 20px 3px, 120% 100%;
+    content: '';
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+  }
+
+  ::selection {
+    background-color: $color-mint;
+  }
+
+}
+
+.remark-slide-content {
+  height: 100%;
+  width: 100%;
+}
+
+.remark-slide-number {
+  @include font-mono();
+  font-size: 1rem;
+
+  .no-slide-numbers & {
+    display: none;
+  }
+}
+
+a {
+  color: rgba($color-text-link, 0.8);
+
+  &:hover,
+  &:active {
+    color: $color-text-link;
+  }
+
+  &:visited {
+    color: $color-text-link-visited;
+  }
+}
+
+.inline {
+  display: inline !important;
+}
+
+.cf {
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.right-float {
+  float: right;
+}
+
+.left-float {
+  float: left;
+}
+
+.remark-code,
+.remark-inline-code {
+  background-color: rgba($color-yellow, 0.2);
+  @include font-mono();
+  text-transform: initial;
+}
+
+.remark-code {
+  font-size: 1em;
+  white-space: pre-wrap;
+}

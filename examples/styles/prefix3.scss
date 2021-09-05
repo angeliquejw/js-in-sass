@@ -1,0 +1,45 @@
+/// List of browser vendor prefixes
+$all-vendors: (
+    'apple', 'khtml',
+    'moz', 'ms', 'o',
+    'rim', 'xv', 'webkit'
+);
+$common-vendors: (
+    'moz','webkit'
+);
+
+/// Mixin to prefix several properties at once
+/// @param {Map} $declarations - Declarations to prefix
+/// @param {List} $prefixes [$common-vendors] - List of prefixes to print
+/// @example
+///   .element {
+///     @include prefix((
+///       border-radius: 30px;
+///     ), moz webkit);
+///   }
+/// @output compiled CSS
+///
+///   .element {
+///     -moz-border-radius: 30px;
+///     -webkit-border-radius: 30px;
+///     border-radius: 30px;
+///   }
+
+/// @author Kitty Giraudel
+
+@mixin prefix($declarations, $prefixes: $common-vendors) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+
+.element {
+  @include prefix((
+     border-radius: 30px
+  ), $common-vendors);
+}

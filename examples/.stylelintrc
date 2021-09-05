@@ -1,7 +1,11 @@
 {
   "rules": {
     "at-rule-name-case": "lower",
-    "at-rule-no-unknown": true,
+    "at-rule-no-unknown": [true,
+      {
+        "ignoreAtRules": ["debug", "each", "example", "include", "mixin"]
+      }
+    ],
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": true,
     "color-no-invalid-hex": true,

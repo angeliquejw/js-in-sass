@@ -22,7 +22,7 @@
       #{'-' + $prefix + '-' + $property}: $value;
     }
 
-    // Output standard non-prefixed declaration
+    // Output standard declaration w/o prefix
     #{$property}: $value;
   }
 }

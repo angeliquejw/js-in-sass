@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "sass": "npx sass --color --no-source-map --watch styles:styles",
+    "update-tokens": "npx json-to-scss styles/tokens/palette.json styles/tokens/_palette-colors.scss -k='sq'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "json-to-scss": "^1.6.2",
     "sass": "^1.39.0",
     "stylelint": "^13.13.1"
   }

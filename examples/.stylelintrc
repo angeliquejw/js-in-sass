@@ -3,7 +3,7 @@
     "at-rule-name-case": "lower",
     "at-rule-no-unknown": [true,
       {
-        "ignoreAtRules": ["debug", "each", "error", "example", "include", "mixin", "warn"]
+        "ignoreAtRules": ["debug", "each", "error", "example", "include", "mixin", "use", "warn"]
       }
     ],
     "at-rule-no-vendor-prefix": true,

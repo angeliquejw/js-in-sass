@@ -173,7 +173,7 @@ class: center, middle, title
 ![](img/notices.png)
 
 ???
-Pause for questions here before diving deeper
+- Pause for questions here before diving deeper
 
 ---
 
@@ -205,7 +205,7 @@ Pause for questions here before diving deeper
 @mixin prefix($declarations, $prefixes: ()) {
   @each $property, $value in $declarations {
     @each $prefix in $prefixes {
-     #{'-' + $prefix + '-' + $property}: $value;
+      #{'-' + $prefix + '-' + $property}: $value;
     }
 
     // Output standard declaration w/o prefix
@@ -216,28 +216,34 @@ Pause for questions here before diving deeper
 
 ---
 
-# Sass provides
+# Basic prefix mixin
 
-- named functions w/ param(s)
 ```scss
-prefix($declarations, $prefixes: ())
-```
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard declaration w/o prefix
+    #{$property}: $value;
+  }
+}
+``` 
+
+- mixin: named functions w/ param(s)
 
 --
 
 - loops
-```scss
-  @each $prefix in $prefixes
-```
 
 --
 
-- interpolation
-```scss
-  #{$property}
-```
+- interpolation: template literals
 
 ---
+
+# Prefix mixin: Going further
 
 - default arguments
 ```scss
@@ -258,6 +264,15 @@ $common-vendors: (
   'moz','webkit'
 );
 ```
+
+---
+class: middle
+
+# I am intrigued
+
+
+![](img/terrier-glasses.png)
+
 
 ---
 
@@ -320,6 +335,20 @@ This combined with debug!
 .text-smaller[More info: _https://sass-lang.com/documentation/values_]
 
 ---
+
+# Use case: design tokens
+
+--
+
+- Parse JSON tokens into usable Sass
+
+--
+
+- Loop over tokens to create color swatches
+
+--
+
+.text-smaller.center[_http://127.0.0.1:5500/examples/palette.html_]
 
 
     </textarea>

@@ -12,14 +12,14 @@ Original Sass selling points:
 
 more complex options, but first let's get familiar with some of the tooling that makes this possible
 
+- template literals
+  - interpolation #{$variable}
+
 - console
   - @error, @warn, @debug directives
   - error for checking functions, mixins and providing user feedback; stops compilation process
   - warn for deprecation notices, style guide corrections; no impact on compilation; include stack trace
   - debug, print value (no stack trace)
-
-- template literals
-  - interpolation #{$variable}
 
 - types
   - null

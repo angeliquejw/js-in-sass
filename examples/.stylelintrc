@@ -3,7 +3,7 @@
     "at-rule-name-case": "lower",
     "at-rule-no-unknown": [true,
       {
-        "ignoreAtRules": ["debug", "each", "example", "include", "mixin"]
+        "ignoreAtRules": ["debug", "each", "error", "example", "include", "mixin", "warn"]
       }
     ],
     "at-rule-no-vendor-prefix": true,
@@ -52,7 +52,7 @@
     "selector-max-attribute": 1,
     "selector-max-class": 2,
     "selector-max-combinators": 2,
-    "selector-max-compound-selectors": 1,
+    "selector-max-compound-selectors": 2,
     "selector-max-empty-lines": 0,
     "selector-max-id": 1,
     "selector-max-pseudo-class": 2,

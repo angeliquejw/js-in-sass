@@ -81,6 +81,10 @@ a {
 
 .left-float {
   float: left;
+
+  + .left-float {
+    margin-left: 2.5em;
+  }
 }
 
 .remark-code,

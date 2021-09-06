@@ -1,0 +1,22 @@
+// $type1: 'hello world';
+// $type2: 42;
+// $type3: true;
+// $type4: null;
+// $type5a: 'moz', 'webkit';
+// $type5b: [];
+// $type6a: tomato;
+// $type6b: #000;
+// $type7: (key: 'value');
+
+.element {
+  // @debug $type1+': '+type-of($type1);
+  // @debug $type2+': '+type-of($type2);
+  // @debug $type3+': '+type-of($type3);
+  // @debug $type4+': '+type-of($type4);
+  // @debug $type5a+': '+type-of($type5a);
+  // @debug $type5b+': '+type-of($type5b);
+  // @debug $type6a+': '+type-of($type6a);
+  // @debug $type6b+': '+type-of($type6b);
+  // @debug $type7;
+  // @debug type-of($type7);
+}

@@ -17,7 +17,28 @@ class: title, center, middle
 
 ---
 
-# Agenda
+# What this talk is not
+
+--
+
+.cf[.left-float[
+![](img/rip-css.png)
+]
+.right-float[
+![](img/rip-sass.png)
+]]
+
+---
+
+# Also: Not about CSS in JS
+
+--
+
+![](img/american-chopper-meme.jpg)
+
+---
+
+# What are we doing here
 
 - Background
 - Sass's surprising capabilities
@@ -88,6 +109,75 @@ Not valid CSS, but with PostCSS you can start using the format in the working dr
 - partials 🤔
 
 ---
+class: center, middle, title
+
+# What's left then?
+
+---
+
+# Mixins: Very basic
+
+```scss
+.element {
+  @include notice();
+}
+```
+
+???
+- Idea of mixin may be familiar
+- DRY, components
+
+--
+
+```scss
+@mixin notice() {
+  background-color: springgreen;
+  border: 1px solid;
+  border-radius: 0.1em;
+  padding: 0.5em;
+  text-align: center;
+}
+```
+
+--
+
+![](img/notice.png)
+
+---
+
+# Mixins: Taking an argument
+
+```scss
+.element {
+  @include notice(tomato);
+}
+```
+
+???
+- Note that, in this case, it takes in an argument or parameter
+
+--
+
+```scss
+@mixin notice($color) {
+  background-color: $color;
+  border: 1px solid;
+  border-radius: 0.1em;
+  padding: 0.5em;
+  text-align: center;
+}
+```
+
+--
+
+![](img/notices.png)
+
+???
+Pause for questions here before diving deeper
+
+---
+
+# Basic prefix mixin
 
 ```scss
 .element {
@@ -97,20 +187,28 @@ Not valid CSS, but with PostCSS you can start using the format in the working dr
 }
 ```
 
-???
-- Idea of mixin may be familiar
-- Note that, in this case, it takes in arguments or params
+--
+
+```scss
+.element {
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+```
 
 ---
+
+# Basic prefix mixin
 
 ```scss
 @mixin prefix($declarations, $prefixes: ()) {
   @each $property, $value in $declarations {
     @each $prefix in $prefixes {
-      #{'-' + $prefix + '-' + $property}: $value;
+     #{'-' + $prefix + '-' + $property}: $value;
     }
 
-    // Output standard non-prefixed declaration
+    // Output standard declaration w/o prefix
     #{$property}: $value;
   }
 }
@@ -118,15 +216,16 @@ Not valid CSS, but with PostCSS you can start using the format in the working dr
 
 ---
 
-- function + arguments
+# Sass provides
 
+- named functions w/ param(s)
 ```scss
-  prefix($declarations, $prefixes: ())
+prefix($declarations, $prefixes: ())
 ```
 
 --
 
-- loop
+- loops
 ```scss
   @each $prefix in $prefixes
 ```
@@ -138,8 +237,90 @@ Not valid CSS, but with PostCSS you can start using the format in the working dr
   #{$property}
 ```
 
+---
+
+- default arguments
+```scss
+prefix($declarations, $prefixes: 'moz', 'webkit')
+```
+
+--
+
+- lists/arrays
+```scss
+/// List of browser vendor prefixes
+$all-vendors: (
+  'apple', 'khtml',
+  'moz', 'ms', 'o',
+  'rim', 'xv', 'webkit'
+);
+$common-vendors: (
+  'moz','webkit'
+);
+```
 
 ---
+
+# Console
+
+--
+```scss
+@debug
+```
+
+???
+- prints message, string, values
+- no stack trace
+
+--
+
+```scss
+@warn
+@error
+```
+
+<br /><br /><br /><br /><br />
+
+.text-smaller[More info: _https://sass-lang.com/documentation/at-rules/debug_]
+
+???
+- warn for deprecation notices, style guide corrections; unlike debug, includes stack trace
+- error for checking functions, mixins and providing user feedback; stops compilation process
+
+---
+
+# Types
+
+--
+
+```scss
+type-of('hello world');
+```
+
+???
+This combined with debug!
+
+--
+
+.cf[.left-float[
+- string
+- number
+- boolean
+- null
+]
+.left-float[
+- list
+- color
+- map
+]]
+
+--
+
+<br /><br />
+.text-smaller[More info: _https://sass-lang.com/documentation/values_]
+
+---
+
 
     </textarea>
   <script src="js/remark-latest.min.js" type="text/javascript">

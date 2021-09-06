@@ -1,0 +1,64 @@
+// 🚫 Do not use these variables 🚫
+$spacing-baseline: 8px;
+
+$spacing-unit-factor-xxs: 0.75; // 6px
+$spacing-unit-factor-xs: 1; // 8px
+$spacing-unit-factor-sm: 2; // 16px
+$spacing-unit-factor: 4; // 32px
+$spacing-unit-factor-lg: 6; // 48px
+$spacing-unit-factor-xl: 10; // 80px
+
+// 🎉 Use the following variables anywhere 🎉
+$spacing-unit: $spacing-baseline * $spacing-unit-factor;
+$spacing-unit-xxs: $spacing-baseline * $spacing-unit-factor-xxs;
+$spacing-unit-xs: $spacing-baseline * $spacing-unit-factor-xs;
+$spacing-unit-sm: $spacing-baseline * $spacing-unit-factor-sm;
+$spacing-unit-lg: $spacing-baseline * $spacing-unit-factor-lg;
+$spacing-unit-xl: $spacing-baseline * $spacing-unit-factor-xl;
+
+@mixin u-margin-horizontal-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-margin-horizontal-auto {
+  @include u-margin-horizontal-auto();
+}
+
+// Loop to generate margin and padding clases based on the values set in 01_settings/spacing.scss
+$spacing-directions: (
+  null: null,
+  '-top': '-top',
+  '-right': '-right',
+  '-bottom': '-bottom',
+  '-left': '-left',
+  '-horizontal': '-left' '-right',
+  '-vertical': '-top' '-bottom'
+);
+
+$spacing-properties: (
+  'padding': 'padding',
+  'margin': 'margin'
+);
+
+$spacing-sizes: (
+  null: $spacing-unit,
+  '-xxs': $spacing-unit-xxs,
+  '-xs': $spacing-unit-xs,
+  '-sm': $spacing-unit-sm,
+  '-lg': $spacing-unit-lg,
+  '-xl': $spacing-unit-xl,
+  '-none': 0
+);
+
+@each $property-namespace, $property in $spacing-properties {
+  @each $direction-namespace, $direction-rules in $spacing-directions {
+    @each $size-namespace, $size in $spacing-sizes {
+      .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+        @each $direction in $direction-rules {
+          #{$property}#{$direction}: $size;
+        }
+      }
+    }
+  }
+}

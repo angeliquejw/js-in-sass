@@ -1,0 +1,12 @@
+@import 'utilities/utilities';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  margin: 0;
+}

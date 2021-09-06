@@ -1,0 +1,55 @@
+@import 'base';
+
+// Create palette classes from design tokens
+@import 'tokens/palette-colors';
+
+$tints: ( 100, 80, 60, 30, 15 );
+
+$lightness: ( 0, 20, 40, 70, 85 );
+
+// @debug 'type: '+ type-of($palette-colors);
+// @debug 'length: '+length($palette-colors);
+
+// @each $name, $color in $palette-colors {
+//   @debug $name + ', ' + type-of($name);
+//   @debug $color + ', ' + type-of($color);
+// }
+
+// @debug map-get($palette-colors, 'revolver');
+
+@each $name, $color in $palette-colors {
+    @each $tint in $tints {
+      .u-color-#{$name}-#{$tint} {
+        color: mix($color, white, $tint*1%);
+      }
+      .u-bg-#{$name}-#{$tint} {
+        background-color: mix($color, white, $tint*1%);
+      }
+    }
+    // Don't use lighten(), it blows out to white too soon
+    // FWIW, darken() has the same issue
+    // @each $value in $lightness {
+    //   $num: 100 - $value;
+    //   .u-bg-#{$name}-#{$num} {
+    //     // background-color: mix($color, white, $tint*1%);
+    //     background-color: lighten($color, $value*1%);
+    //   }
+    // }
+}
+
+// Swatch page styles
+.swatch-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  > li {
+    flex: 1 0 200px;
+    margin: 0;
+    padding: 1em;
+  }
+}
+
+.swatch-panel {
+  height: 80px;
+  margin-bottom: 0.5em;
+}

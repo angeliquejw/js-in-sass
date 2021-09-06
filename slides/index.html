@@ -20,6 +20,7 @@ class: title, center, middle
 # What this talk is not
 
 --
+count: false
 
 .cf[.left-float[
 ![](img/rip-css.png)
@@ -33,6 +34,7 @@ class: title, center, middle
 # Also: Not about CSS in JS
 
 --
+count: false
 
 ![](img/american-chopper-meme.jpg)
 
@@ -55,12 +57,14 @@ class: title, center, middle
 
 ---
 class: center, middle
+count: false
 
 
 ![](img/autoprefixer.jpg)
 ![](img/postcss.jpg)
 
 ---
+count: false
 
 # What was so great about Sass?
 
@@ -70,8 +74,10 @@ class: center, middle
 ---
 background-image: url(img/css-variables.png)
 class: bkgd-contain, center
+count: false
 
 ---
+count: false
 
 # What was so great about Sass?
 
@@ -81,6 +87,7 @@ class: bkgd-contain, center
 
 ---
 class: center, middle
+count: false
 
 ![](img/css-nesting.png)
 
@@ -89,17 +96,21 @@ Not valid CSS, but with PostCSS you can start using the format in the working dr
 - https://www.npmjs.com/package/postcss-nesting
 
 ---
+count: false
 
 # What was so great about Sass?
 
 - ~~vendor prefixes~~
 - ~~variables~~
 - nesting 🤔
+
 --
+count: false
 
 - partials
 
 ---
+count: false
 
 # What was so great about Sass?
 
@@ -128,6 +139,7 @@ class: center, middle, title
 - DRY, components
 
 --
+count: false
 
 ```scss
 @mixin notice() {
@@ -140,6 +152,7 @@ class: center, middle, title
 ```
 
 --
+count: false
 
 ![](img/notice.png)
 
@@ -157,6 +170,7 @@ class: center, middle, title
 - Note that, in this case, it takes in an argument or parameter
 
 --
+count: false
 
 ```scss
 @mixin notice($color) {
@@ -169,6 +183,7 @@ class: center, middle, title
 ```
 
 --
+count: false
 
 ![](img/notices.png)
 
@@ -188,6 +203,7 @@ class: center, middle, title
 ```
 
 --
+count: false
 
 ```scss
 .element {
@@ -215,6 +231,7 @@ class: center, middle, title
 ```
 
 ---
+count: false
 
 # Basic prefix mixin
 
@@ -234,10 +251,12 @@ class: center, middle, title
 - mixin: named functions w/ param(s)
 
 --
+count: false
 
 - loops
 
 --
+count: false
 
 - interpolation: template literals
 
@@ -251,6 +270,7 @@ prefix($declarations, $prefixes: 'moz', 'webkit')
 ```
 
 --
+count: false
 
 - lists/arrays
 ```scss
@@ -270,15 +290,15 @@ class: middle
 
 # I am intrigued
 
-
 ![](img/terrier-glasses.png)
-
 
 ---
 
 # Console
 
 --
+count: false
+
 ```scss
 @debug
 ```
@@ -288,6 +308,7 @@ class: middle
 - no stack trace
 
 --
+count: false
 
 ```scss
 @warn
@@ -307,6 +328,7 @@ class: middle
 # Types
 
 --
+count: false
 
 ```scss
 type-of('hello world');
@@ -316,6 +338,7 @@ type-of('hello world');
 This combined with debug!
 
 --
+count: false
 
 .cf[.left-float[
 - string
@@ -330,6 +353,7 @@ This combined with debug!
 ]]
 
 --
+count: false
 
 <br /><br />
 .text-smaller[More info: _https://sass-lang.com/documentation/values_]
@@ -339,17 +363,48 @@ This combined with debug!
 # Use case: design tokens
 
 --
+count: false
 
 - Parse JSON tokens into usable Sass
 
 --
+count: false
 
 - Loop over tokens to create color swatches
 
 --
+count: false
 
 .text-smaller.center[_http://127.0.0.1:5500/examples/palette.html_]
 
+
+---
+
+# To sum up
+
+## ✨ Sass ✨
+
+- has usefulness beyond variables and nesting
+- can still be a useful took in your 2021 front-end kit
+
+---
+
+# Additional resources
+
+## You can write tests in/for Sass
+True: .text-smaller[https://www.oddbird.net/true/docs/]
+
+## You can document your Sass
+SassDoc: .text-smaller[http://sassdoc.com/]
+
+
+## Lodash, but make it Sass
+SassDash: .text-smaller[http://davidkpiano.github.io/sassdash/sassdoc/]
+
+---
+class: center, middle, title
+
+😺 Thank you
 
     </textarea>
   <script src="js/remark-latest.min.js" type="text/javascript">

@@ -139,6 +139,8 @@
 
 .remark-slide-content {
   font-size: 1em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
 }
 
 .remark-slide-content h1,
@@ -265,11 +267,11 @@ ol + .remark-slide-content p {
 }
 
 .remark-slide ::-moz-selection {
-  background-color: #A2F1C1;
+  background-color: #F6F930;
 }
 
 .remark-slide ::selection {
-  background-color: #A2F1C1;
+  background-color: #F6F930;
 }
 
 .remark-slide-content {
@@ -336,7 +338,7 @@ a:visited {
 
 .remark-code {
   font-size: 1em;
-  font-size: 0.73em;
+  font-size: 0.7em;
   white-space: pre-wrap;
 }
 

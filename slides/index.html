@@ -17,29 +17,6 @@ class: title, center, middle
 
 ---
 
-# What this talk is not
-
---
-count: false
-
-.cf[.left-float[
-![](img/rip-css.png)
-]
-.right-float[
-![](img/rip-sass.png)
-]]
-
----
-
-# Also: Not about CSS in JS
-
---
-count: false
-
-![](img/american-chopper-meme.jpg)
-
----
-
 # What are we doing here
 
 - Background
@@ -52,6 +29,9 @@ count: false
 ---
 
 # What was so great about Sass?
+
+--
+count: false
 
 - vendor prefixes
 
@@ -128,6 +108,7 @@ class: center, middle, title
 
 # Mixins: Very basic
 
+Sass code:
 ```scss
 .element {
   @include notice();
@@ -141,8 +122,9 @@ class: center, middle, title
 --
 count: false
 
-```scss
-@mixin notice() {
+Compiles to:
+```css
+.element {
   background-color: springgreen;
   border: 1px solid;
   border-radius: 0.1em;
@@ -157,6 +139,21 @@ count: false
 ![](img/notice.png)
 
 ---
+count: false
+
+# Mixins: Very basic
+
+```scss
+@mixin notice() {
+  background-color: springgreen;
+  border: 1px solid;
+  border-radius: 0.1em;
+  padding: 0.5em;
+  text-align: center;
+}
+```
+
+---
 
 # Mixins: Taking an argument
 
@@ -167,10 +164,31 @@ count: false
 ```
 
 ???
-- Note that, in this case, it takes in an argument or parameter
+- Note that, in this case, it takes in an argument
 
 --
 count: false
+
+```scss
+*@mixin notice($color) {
+* background-color: $color;
+  border: 1px solid;
+  border-radius: 0.1em;
+  padding: 0.5em;
+  text-align: center;
+}
+```
+
+---
+count: false
+
+# Mixins: Taking an argument
+
+```scss
+.element {
+  @include notice(tomato);
+}
+```
 
 ```scss
 @mixin notice($color) {
@@ -182,9 +200,6 @@ count: false
 }
 ```
 
---
-count: false
-
 ![](img/notices.png)
 
 ???
@@ -194,6 +209,7 @@ count: false
 
 # Basic prefix mixin
 
+Sass code:
 ```scss
 .element {
   @include prefix((
@@ -205,7 +221,8 @@ count: false
 --
 count: false
 
-```scss
+Compiles to:
+```css
 .element {
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -236,7 +253,7 @@ count: false
 # Basic prefix mixin
 
 ```scss
-@mixin prefix($declarations, $prefixes: ()) {
+*@mixin prefix($declarations, $prefixes: ()) {
   @each $property, $value in $declarations {
     @each $prefix in $prefixes {
       #{'-' + $prefix + '-' + $property}: $value;
@@ -250,13 +267,43 @@ count: false
 
 - mixin: named functions w/ param(s)
 
---
+---
 count: false
+
+# Basic prefix mixin
+
+```scss
+@mixin prefix($declarations, $prefixes: ()) {
+* @each $property, $value in $declarations {
+*   @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+*   }
+
+    // Output standard declaration w/o prefix
+    #{$property}: $value;
+* }
+}
+``` 
 
 - loops
 
---
+---
 count: false
+
+# Basic prefix mixin
+
+```scss
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+*     #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard declaration w/o prefix
+*   #{$property}: $value;
+  }
+}
+```
 
 - interpolation: template literals
 
@@ -305,7 +352,6 @@ count: false
 
 ???
 - prints message, string, values
-- no stack trace
 
 --
 count: false
@@ -320,12 +366,13 @@ count: false
 .text-smaller[More info: _https://sass-lang.com/documentation/at-rules/debug_]
 
 ???
-- warn for deprecation notices, style guide corrections; unlike debug, includes stack trace
-- error for checking functions, mixins and providing user feedback; stops compilation process
+- warn includes stack trace (debug does not); good for: deprecation notices, style guide corrections
+- error stops compilation process; good for: checking functions, mixins
+- demo with `notice.scss`
 
 ---
 
-# Types
+# Data types + type checking
 
 --
 count: false
@@ -335,7 +382,8 @@ type-of('hello world');
 ```
 
 ???
-This combined with debug!
+- This combined with debug!
+- Demo with `types.scss`
 
 --
 count: false
@@ -411,6 +459,7 @@ class: center, middle, title
   </script>
   <script type="text/javascript">
     var slideshow = remark.create({
+      highlightLines: true,
       highlightStyle: "tomorrow"
     });
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "npx sass --color --no-source-map --watch styles:styles",
+    "sass": "npx sass --color --no-source-map --watch styles/sass:styles",
     "update-tokens": "npx json-to-scss styles/tokens/palette.json styles/tokens/_palette-colors.scss -k='sq'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

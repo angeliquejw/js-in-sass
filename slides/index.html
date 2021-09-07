@@ -15,6 +15,10 @@ class: title, center, middle
 
 # JS in Sass
 
+???
+- Play on CSS in JS
+- Opportunity to share some of the functionality of JS that you may not know exists in Sass
+
 ---
 
 # What are we doing here
@@ -25,6 +29,8 @@ class: title, center, middle
 
 ???
 - Why was Sass exciting in the first place?
+- Walk through capabilities
+- Demo
 
 ---
 
@@ -35,6 +41,9 @@ count: false
 
 - vendor prefixes
 
+???
+Through libs like Bourbon and Compass, vendor prefixing became less manual process
+
 ---
 class: center, middle
 count: false
@@ -42,6 +51,9 @@ count: false
 
 ![](img/autoprefixer.jpg)
 ![](img/postcss.jpg)
+
+???
+Handled more automatically and consistently via PostCSS and Autoprefixer
 
 ---
 count: false
@@ -51,10 +63,17 @@ count: false
 - ~~vendor prefixes~~
 - variables
 
+???
+- Ability to simplify and make reusable things like color names and font stacks
+- For me, this was the initial appeal that got me into Sass
+
 ---
 background-image: url(img/css-variables.png)
 class: bkgd-contain, center
 count: false
+
+???
+- Available in Edge since 2017, earlier in Chrome and Firefox
 
 ---
 count: false
@@ -65,15 +84,19 @@ count: false
 - ~~variables~~
 - nesting
 
+???
+While a somewhat controversial benefit, Sass allows nesting of selectors
+
 ---
 class: center, middle
 count: false
 
 ![](img/css-nesting.png)
 
+.text-smaller[_https://www.npmjs.com/package/postcss-nesting_]
+
 ???
 Not valid CSS, but with PostCSS you can start using the format in the working draft
-- https://www.npmjs.com/package/postcss-nesting
 
 ---
 count: false
@@ -89,6 +112,9 @@ count: false
 
 - partials
 
+???
+While not available natively in CSS, we've gotten there in a roundabout way with web components and the various ways styles can be incorporated with React or Vue components
+
 ---
 count: false
 
@@ -98,6 +124,9 @@ count: false
 - ~~variables~~
 - nesting 🤔
 - partials 🤔
+
+???
+If these were your core reasons for using Sass, you might be questioning what place it has in your front-end stack in 2021 or the next year.
 
 ---
 class: center, middle, title
@@ -116,8 +145,8 @@ Sass code:
 ```
 
 ???
-- Idea of mixin may be familiar
-- DRY, components
+- Very basic mixins had a whiff of components to them
+- DRY, allow simple, reusable code
 
 --
 count: false
@@ -132,6 +161,9 @@ Compiles to:
   text-align: center;
 }
 ```
+
+???
+- Single line of `include` allows a developer to recreate a plethora of styles
 
 --
 count: false
@@ -153,18 +185,22 @@ count: false
 }
 ```
 
+???
+- Actual mixin code is very nearly just CSS
+- We can take this further, tho
+
 ---
 
-# Mixins: Taking an argument
+# Mixins: Parameters
 
 ```scss
 .element {
-  @include notice(tomato);
+* @include notice(tomato);
 }
 ```
 
 ???
-- Note that, in this case, it takes in an argument
+- Note that, in this case, it receives in an argument
 
 --
 count: false
@@ -182,7 +218,7 @@ count: false
 ---
 count: false
 
-# Mixins: Taking an argument
+# Mixins: Parameters
 
 ```scss
 .element {
@@ -204,6 +240,9 @@ count: false
 
 ???
 - Pause for questions here before diving deeper
+- If this was all we could do with Sass, I might not be impressed; there are some ways we can get here with standard CSS
+- But, I said earlier that there were whole libraries of Sass functionality -- not just styles, like Bootstrap, but functions -- like adding in those browser prefixes
+- Started to dig into those libraries and learn from the code published within
 
 ---
 
@@ -218,6 +257,9 @@ Sass code:
 }
 ```
 
+???
+If you, too, ever used a prefix mixin, it may have looked something like this
+
 --
 count: false
 
@@ -229,6 +271,9 @@ Compiles to:
   border-radius: 30px;
 }
 ```
+
+???
+This may have been the beginning and end of your relationship with this code. But if you dug deeper to find the mixin behind it all...
 
 ---
 
@@ -246,6 +291,10 @@ Compiles to:
   }
 }
 ```
+
+???
+- You'd uncover something like this
+- This has some of the readability of CSS, but familiarity with another language like JavaScript is what really helps understand what's going on here
 
 ---
 count: false
@@ -307,6 +356,9 @@ count: false
 
 - interpolation: template literals
 
+???
+And we can take this even further yet
+
 ---
 
 # Prefix mixin: Going further
@@ -339,9 +391,18 @@ class: middle
 
 ![](img/terrier-glasses.png)
 
+???
+- A lot more feels possible at this point
+- Sense of flexibility within Sass
+- But, also, to really benefit from this, need some tooling
+
 ---
 
 # Console
+
+???
+- Namely, one of the ways we teach and debug JS is through console output
+- What's the Sass equivalent, is there one?
 
 --
 count: false
@@ -374,6 +435,10 @@ count: false
 
 # Data types + type checking
 
+???
+- One of the other things I want in working with a language is a sense of valid and possible data types
+- Both CSS and Sass provide this
+
 --
 count: false
 
@@ -382,6 +447,7 @@ type-of('hello world');
 ```
 
 ???
+- `type-of` likely looks familiar to those who've used a similar command in JS
 - This combined with debug!
 - Demo with `types.scss`
 
@@ -400,9 +466,6 @@ count: false
 - map
 ]]
 
---
-count: false
-
 <br /><br />
 .text-smaller[More info: _https://sass-lang.com/documentation/values_]
 
@@ -410,10 +473,16 @@ count: false
 
 # Use case: design tokens
 
+???
+So, let's put this all together and explore how Sass' maps and mixins can be used and how debug can help us write that code.
+
 --
 count: false
 
 - Parse JSON tokens into usable Sass
+
+???
+This is a legit use case, as some systems, like Invision, make information from the design system accessible via JSON and other formats.
 
 --
 count: false
@@ -433,7 +502,7 @@ count: false
 ## ✨ Sass ✨
 
 - has usefulness beyond variables and nesting
-- can still be a useful took in your 2021 front-end kit
+- can still be useful in your 2021 front-end toolkit
 
 ---
 

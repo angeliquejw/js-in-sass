@@ -366,5 +366,10 @@ a:visited {
     background-position: unset;
     background-size: unset;
   }
+  .remark-container.remark-presenter-mode .remark-slide-notes {
+    border-top-color: transparent;
+    margin-left: 640px;
+    width: 320px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

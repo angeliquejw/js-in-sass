@@ -10,27 +10,24 @@
 //   @include notice();
 // }
 
-
 @mixin notice($color) {
   background-color: $color;
   border: 1px solid;
   border-radius: 0.1em;
   padding: 0.5em;
   text-align: center;
-  // @debug 'Using color: #{$color}';
+  @debug 'Using color: #{$color}';
 }
 
 .element {
   + .element {
     margin-top: 0.5em;
   }
-  &:nth-of-type(1) {
-    @include notice(springgreen);
-  }
-  &:nth-of-type(2) {
-    @include notice(tomato);
-  }
-  &:nth-of-type(3) {
-    @include notice(thistle);
-  }
+  @include notice(thistle);
+  // &:nth-of-type(2) {
+  //   @include notice(tomato);
+  // }
+  // &:nth-of-type(3) {
+  //   @include notice(springgreen);
+  // }
 }
